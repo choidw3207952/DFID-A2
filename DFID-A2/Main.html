@@ -1,0 +1,389 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Popular museum exhibits</title> <!--Title name--> <!--Main page!!!!-->
+        <link rel="stylesheet" href="assets/css/style.css"> <!--Link Css file-->
+    </head>
+
+    <body>
+        <header>
+            <div class="logo" id="logo-id"> <!--Header Logo-->
+                <h1>Popular museum exhibits</h1>
+                <p>Weekly Popularity Ranking</p>
+            </div>
+    </header>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+        <!--API start-->
+        <script type="text/javascript">
+        //api1
+        $(document).ready(function () {
+
+        var key = '4SDwv6pd4DyiBrJ5xu2PnVUmaLhIogIk';
+        var objectid = '157101'; //object ID
+        var url = 'https://data.nma.gov.au/object/' + objectid + '&apikey=' + key;
+
+        $.getJSON(url, function (apiData) {
+            console.log('API1 start');
+            console.log(apiData);
+
+            var item = apiData.data[0];
+            var collectionid = item.collection.id;
+            var title = $('<h4>').html(apiData.data[0].title);
+            $('body').append(title);
+            $('.hero-1').append(title);
+            $('.hero-1-1').html(item.physicalDescription);
+
+            var imageurl = 'https://data.nma.gov.au/media/' + item.hasVersion[1].id + '&apikey=' + key;
+            console.log(imageurl);
+            
+            //image loading
+            $.getJSON(imageurl, function (i) {
+                console.log('API1 image');
+                var img = i.data[0].hasVersion[1].identifier;
+                console.log(i);
+                console.log(img);
+                $('.img-hero').append('<img src="' + img + '">');
+            })
+
+            var imageurl = 'https://data.nma.gov.au/media/' + item.hasVersion[0].id + '&apikey=' + key;
+            console.log(imageurl);
+
+            //second image loading
+            $.getJSON(imageurl, function (i) {
+                console.log('API1 image 2');
+                var img = i.data[0].hasVersion[0].identifier;
+                console.log(i);
+                console.log(img);
+                $('.img-hero-2').append('<img src="' + img + '">');
+            })
+
+            var collectionurl = 'https://data.nma.gov.au/collection/' + collectionid + '&apikey=' + key;
+            $.getJSON(collectionurl, function (d) {
+                console.log('collection');
+                console.log(d);
+            })
+          });   
+        });
+
+        //API2
+        $(document).ready(function () {
+            var key = '4SDwv6pd4DyiBrJ5xu2PnVUmaLhIogIk';
+            var objectid = '14693'; 
+            var url = 'https://data.nma.gov.au/object/' + objectid + '&apikey=' + key;
+
+                $.getJSON(url, function (apiData) {
+                    console.log('API2 start');
+                    console.log(apiData);
+
+                    var item = apiData.data[0];
+                    var collectionid = item.collection.id;
+                    var title = $('<h4>').html(apiData.data[0].title);
+                    $('body').append(title);
+                    $('.api1-1').append(title);
+                    $('.description-1').html(item.physicalDescription);
+
+                    var imageurl = 'https://data.nma.gov.au/media/' + item.hasVersion[1].id + '&apikey=' + key;
+                    console.log(imageurl);
+                    
+                    //image loading
+                    $.getJSON(imageurl, function (i) {
+                        console.log('API2 image');
+                        var img = i.data[0].hasVersion[1].identifier;
+                        console.log(i);
+                        console.log(img);
+                        $('.image-1').append('<img src="' + img + '">');
+                    })
+
+                    var collectionurl = 'https://data.nma.gov.au/collection/' + collectionid + '&apikey=' + key;
+                    $.getJSON(collectionurl, function (d) {
+                        console.log('collection');
+                        console.log(d);
+                    })
+                  });         
+        });
+
+        //api3
+        $(document).ready(function () {
+            var key = '4SDwv6pd4DyiBrJ5xu2PnVUmaLhIogIk';
+            var objectid = '150681'; 
+            var url = 'https://data.nma.gov.au/object/' + objectid + '&apikey=' + key;
+
+                $.getJSON(url, function (apiData) {
+                    console.log('API3 start');
+                    console.log(apiData);
+
+                    var item = apiData.data[0];
+                    var collectionid = item.collection.id;
+                    var title = $('<h4>').html(apiData.data[0].title);
+                    $('body').append(title);
+                    $('.api2-1').append(title);
+                    $('.description-2').html(item.physicalDescription);
+
+                    var imageurl = 'https://data.nma.gov.au/media/' + item.hasVersion[0].id + '&apikey=' + key;
+                    console.log(imageurl);
+                    
+                    //image loading
+                    $.getJSON(imageurl, function (i) {
+                        console.log('API3 image');
+                        var img = i.data[0].hasVersion[0].identifier;
+                        console.log(i);
+                        console.log(img);
+                        $('.image-2').append('<img src="' + img + '">');
+                    })
+
+                    var imageurl = 'https://data.nma.gov.au/media/' + item.hasVersion[1].id + '&apikey=' + key;
+                    console.log(imageurl);
+                    
+                    //second image loading
+                    $.getJSON(imageurl, function (i) {
+                        console.log('API3 image 2');
+                        var img = i.data[0].hasVersion[1].identifier;
+                        console.log(i);
+                        console.log(img);
+                        $('.image-2-2').append('<img src="' + img + '">');
+                    })
+
+                    var collectionurl = 'https://data.nma.gov.au/collection/' + collectionid + '&apikey=' + key;
+                    $.getJSON(collectionurl, function (d) {
+                        console.log('collection');
+                        console.log(d);
+                    })
+                });         
+        });
+
+        //api4
+        $(document).ready(function () {
+            var key = '4SDwv6pd4DyiBrJ5xu2PnVUmaLhIogIk';
+            var objectid = '31113'; 
+            var url = 'https://data.nma.gov.au/object/' + objectid + '&apikey=' + key;
+
+                $.getJSON(url, function (apiData) {
+                    console.log('API4 start');
+                    console.log(apiData);
+
+                    var item = apiData.data[0];
+                    var collectionid = item.collection.id;
+                    var title = $('<h4>').html(apiData.data[0].title);
+                    $('body').append(title);
+                    $('.api3-1').append(title);
+                    $('.description-3').html(item.physicalDescription);
+
+                    var imageurl = 'https://data.nma.gov.au/media/' + item.hasVersion[0].id + '&apikey=' + key;
+                    console.log(imageurl);
+                    
+                    //image loading
+                    $.getJSON(imageurl, function (i) {
+                        console.log('API4 image');
+                        var img = i.data[0].hasVersion[0].identifier;
+                        console.log(i);
+                        console.log(img);
+                        $('.image-3').append('<img src="' + img + '">');
+                    })
+
+                    var imageurl = 'https://data.nma.gov.au/media/' + item.hasVersion[1].id + '&apikey=' + key;
+                    console.log(imageurl);
+
+                    //Second image loading
+                    $.getJSON(imageurl, function (i) {
+                        console.log('API4 image 2');
+                        var img = i.data[0].hasVersion[1].identifier;
+                        console.log(i);
+                        console.log(img);
+                        $('.image-3-2').append('<img src="' + img + '">');
+                    })
+
+                    var collectionurl = 'https://data.nma.gov.au/collection/' + collectionid + '&apikey=' + key;
+                    $.getJSON(collectionurl, function (d) {
+                        console.log('collection');
+                        console.log(d);
+                    })
+                });         
+        });
+
+        //api5
+        $(document).ready(function () {
+            var key = '4SDwv6pd4DyiBrJ5xu2PnVUmaLhIogIk';
+            var objectid = '32723'; 
+            var url = 'https://data.nma.gov.au/object/' + objectid + '&apikey=' + key;
+
+                $.getJSON(url, function (apiData) {
+                    console.log('API5 start');
+                    console.log(apiData);
+
+                    var item = apiData.data[0];
+                    var collectionid = item.collection.id;
+                    var title = $('<h4>').html(apiData.data[0].title);
+                    $('body').append(title);
+                    $('.api4-1').append(title);
+                    $('.description-4').html(item.physicalDescription);
+
+                    var imageurl = 'https://data.nma.gov.au/media/' + item.hasVersion[1].id + '&apikey=' + key;
+                    console.log(imageurl);
+
+                    //image loading
+                    $.getJSON(imageurl, function (i) {
+                        console.log('API5 image');
+                        var img = i.data[0].hasVersion[1].identifier;
+                        console.log(i);
+                        console.log(img);
+                        $('.image-4').append('<img src="' + img + '">');
+                    })
+
+                    var collectionurl = 'https://data.nma.gov.au/collection/' + collectionid + '&apikey=' + key;
+                    $.getJSON(collectionurl, function (d) {
+                        console.log('collection');
+                        console.log(d);
+                    })
+                });         
+        });
+        </script> <!--API loading fin-->
+
+<br>    <br>    <br>    <br>    <br>    <br>    <br>
+<div class="hrsetting"> <!--Line setting-->
+    <br>
+  </div>
+  <h1>Welcome to Website!</h1> <!--Welcome comment-->
+  <p>&emsp;&emsp;&emsp;Let's take a look some of the most popular exhibit this week.</p>
+  <div class="hrsetting"> <!--Line setting-->
+    <br>
+  </div>
+        <div class="wrapper">
+            <div class="hrsetting"> <!--Line setting-->
+                <br>
+              </div>
+            <div id="sidebar"> <!--sidebar-->
+                <h3>About this site</h3><br><br>
+                    <strong>Related Pages:</strong> <br><br> <a href="https://www.nma.gov.au/">National Museam Australia</a><br><br><br>
+                    <strong>See more collection: </strong> <br><br><a href="http://collectionsearch.nma.gov.au/">Collection explorer</a><br><br><br>
+                    <hr><br>
+                    <div id="sidebarcolor">
+                    <ul>
+                      <li>This website being developed to introduce about shows the museum's most popular exhibits.</li><br>
+                      <hr><br>
+                      <li>Please select to get information on the page if you want.</li>
+                      <br>
+                    </div>       
+              </div>
+<!--show api-->
+<br>
+<h2>Gallery</h2>
+<div class="responsive"> <!--Start gallery/Introduction-->
+  <div class="gallery">
+    <div class="image-1">
+    </div>
+    <div class="desc"> <div class="api1-1div"><div class="api1-1"></div></div></div>
+    </div>
+  </div>
+        
+        
+<div class="responsive">
+  <div class="gallery">
+    <div class="img-hero">
+    </div>
+    <div class="desc"><div class="gallaryfont"><div class="hero-1"></div></div></div>
+    </div>
+</div>
+        
+<div class="responsive">
+  <div class="gallery">
+    <div class="image-2">
+    </div>
+    <div class="desc"><div class="gallaryfont"><div class="api2-1"></div></div></div>
+    </div>
+</div> 
+
+<div class="responsive">
+  <div class="gallery">
+    <div class="image-3">
+    </div>
+    <div class="desc"><div class="gallaryfont"><div class="api3-1"></div></div></div>
+    </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <div class="image-4">
+    </div>
+    <div class="desc"><div class="gallaryfont"><div class="api4-1"></div></div></div>
+    </div>
+</div>
+<!--Finish gallery/Introduction-->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br>
+<hr>
+<br>
+<h2>Learn more about exhibits</h2>
+<p>Select the popular exhibits you want to see and view it!</p>
+<br> <!--start detail-->
+<details>
+  <summary>Postcard featuring a station, Sydney</summary>
+  <p>
+    <div class="img-hero"></div>
+    <div class="responsive"> 
+      <div class="gallery">
+        <div class="img-hero-2"></div><br>
+        <div class="desc">postcard</div>
+        </div>
+      </div>
+      <div class="hero-1"></div>
+    <u><h4>Description</h4></u>
+    <div class="hero-1-1"></div>
+  </p><br><br><br><br><br><br>
+</details>
+<br>
+<details>
+  <summary>Glass plate negative</summary>
+  <p>
+    <div class="image-1"></div>
+      <div class="api1-1"></div>
+    <u><h4>Description</h4></u>
+    <div class="description-1"></div>
+  </p><br><br><br><br>
+</details>
+<br>
+<details>
+  <summary>Wyoming, Hunter and Macquarie Streets Sydney N.S.W.</summary>
+  <p>
+    <div class="image-2"></div>
+    <div class="responsive"> 
+      <div class="gallery">
+        <div class="image-2-2"></div><br>
+        <div class="desc">Postcard (back side)</div>
+        </div>
+      </div><br>
+      <div class="api2-1"></div>
+    <u><h4>Description</h4></u>
+    <div class="description-2"></div>
+  </p><br><br><br><br><br><br>
+</details>
+<br>
+<details>
+  <summary>St. Mary's Cathedral, Sydney</summary>
+  <p>
+    <div class="image-3"></div>
+    <div class="responsive"> 
+      <div class="gallery">
+        <div class="image-3-2"></div><br>
+        <div class="desc">Postcard (back side)</div>
+        </div>
+      </div><br>
+      <div class="api3-1"></div>
+    <u><h4>Description</h4></u>
+    <div class="description-3"></div>
+  </p><br><br><br><br><br><br>
+</details>
+<br>
+<details>
+  <summary>Australia: Bondi Beach Sydney</summary>
+  <p>
+    <div class="image-4"></div>
+  <br>
+      <div class="api3-1"></div>
+    <u><h4>Description</h4></u>
+    <div class="description-4"></div>
+  </p>
+</details>
+    </body>
+</html>

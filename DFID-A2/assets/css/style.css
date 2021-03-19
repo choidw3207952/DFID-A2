@@ -1,0 +1,120 @@
+@import url('https:fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,700&display=swap');
+
+html{
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+/*setting header size and color*/
+header {
+    box-sizing: border-box;
+    height: 20vh;
+    width: 100%;
+	padding: 10px;
+    background: #ff6666;
+    position: fixed;
+    top: 0;
+    color: white;
+    font-family: sans-serif;
+}
+
+.logo{
+    max-width: 800px !important;
+    float: left;
+}
+    .logo p{ /*Setting logo location*/
+        position: relative;
+        top: -30px;
+        left: 30px;
+    }
+
+h1{
+    font-size: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+
+.wrapper { 
+    margin: 10px auto 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 90%;
+  padding: 20px;
+}				
+    .photo {
+        display: none;
+    }
+    footer { /*footer size, color*/
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        background: gray;
+    }		
+    footer p { /*in footer font*/
+        font-family: sans-serif;
+        font-size: 20px;
+        line-height: 100px;
+        color: white;
+        text-align: center;
+    }
+
+    .hrsetting{
+        background-color: rgb(255, 238, 241);
+    }
+
+    #sidebar { 
+        width: 220px;  
+        padding: 20px;  
+        float: right;  /* setting right */
+        background:#eee;
+    }
+    
+    #sidebarnav { 
+        width: 220px;  
+        padding: 20px;  
+        float: right;
+        background:#eee;
+    }
+    
+    /*sidebar background color*/
+    #sidebarcolor{ 
+        color: gray;
+    }
+
+    div.gallery {
+        border: 1px solid #ccc;
+      }
+      
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+      
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+      
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+      
+      * {
+        box-sizing: border-box;
+      }
+      
+      .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 24.99999%;
+      }
+
+      .api1-1div { display: inline-block; width: 135px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size:15px;}
+
+      .gallaryfont{font-size:15px;}
+
+      
