@@ -5,9 +5,13 @@ I have been practising API using HTML and Javascript for the last 5 weeks and le
 This web application was developed using the design process.
 
 ![GitHub Logo](/images/imagepages.png)
+
 When we look at the Internet site, many sites show posts like a gallery. I got inspired by this and decided to create a simple web application that shows pictures of the exhibits to the gallery and explains. 
 
 First, I thought about how to make this application. I coded what will be shown in the front end using HTML and CSS, which I learned last semester. The knowledge I learned in the front-end Web design (11056) course I completed last year was beneficial.
+
+
+![GitHub Logo](/images/apisetting.png)
 
 After the front-end design was completed, I started coding API code. The API utilizes the National museum Australia, which was used during the tutorial time. This API was the perfect choice to make exhibits show in the gallery. While writing the API code, I thought about what data would bring. As a result, I decided to bring some pictures, the name, and the exhibits' description. At first, I was embarrassed because I miscoded something, but after a few corrections, it was a success bring the data! And when I was coding, I was able to use the array that I learned in the first module. For example, some objects contain multiple pictures, and I could select the data to use through the array(function). 
 
