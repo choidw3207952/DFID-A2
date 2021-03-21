@@ -4,6 +4,7 @@ I have been practising API using HTML and Javascript for the last 5 weeks and le
 
 This web application was developed using the design process.
 
+
 ![GitHub Logo](/images/imagepages.png)
 
 When we look at the Internet site, many sites show posts like a gallery. I got inspired by this and decided to create a simple web application that shows pictures of the exhibits to the gallery and explains. 
@@ -13,11 +14,31 @@ First, I thought about how to make this application. I coded what will be shown 
 
 ![GitHub Logo](/images/apisetting.png)
 
-After the front-end design was completed, I started coding API code. The API utilizes the National museum Australia, which was used during the tutorial time. This API was the perfect choice to make exhibits show in the gallery. While writing the API code, I thought about what data would bring. As a result, I decided to bring some pictures, the name, and the exhibits' description. At first, I was embarrassed because I miscoded something, but after a few corrections, it was a success bring the data! And when I was coding, I was able to use the array that I learned in the first module. For example, some objects contain multiple pictures, and I could select the data to use through the array(function). 
+After the front-end design was completed, I started coding API code. The API utilizes the National museum Australia, which was used during the tutorial time. This API was the perfect choice to make exhibits show in the gallery. While writing the API code, I thought about what data would bring. As a result, I decided to bring some pictures, the name, and the exhibits' description. At first, I was embarrassed because I miscoded something, but after a few corrections, it was a success bring the data! 
+
+
+![GitHub Logo](/images/array.png)
+
+And when I was coding, I was able to use the array that I learned in the first module. For example, some objects contain multiple pictures, and I could select the data to use through the array(function). 
+
+
+![GitHub Logo](/images/galleryhtml.png)
+![GitHub Logo](/images/gallerycss.png)
+![GitHub Logo](/images/galleryfront.png)
 
 Next is I was doing coding to show the imported data in the front end. As I said before, I decided to make a gallery display of exhibits. So I used HTML and CSS to code the photo data to look like gallery. The title of the exhibits below the picture was also written by calling API data. 
+
+
+![GitHub Logo](/images/infodetail.png)
+![GitHub Logo](/images/detail.png)
+
 Below is detailed description of the exhibits. Similarly, this description was created by calling API data. As a result of placing the previously imported data tag where I wanted it, it is well display at the front end. I used the Detail code because it might be hard to see too much data at once.
 
-Finally, web application development is complete. After completing coding, I uploaded it to the folder on the Siteground site for can view online. Now I can use web applications anytime, anywhere. 
+![GitHub Logo](/images/homepageall.png)
+
+Finally, web application development is complete. 
+
+![GitHub Logo](/images/siteground.png)
+After completing coding, I uploaded it to the folder on the Siteground site for can view online. Now I can use web applications anytime, anywhere. 
 
 I had some difficulties because it has been a long time since I have been practising. But I created a web application safely because I participated in online tutorial classes and practised various codes. And I was able to increase my application development knowledge. I want to study more about API and make a practical app next time.
