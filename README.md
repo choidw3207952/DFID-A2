@@ -5,7 +5,6 @@ I have been practising API using HTML and Javascript for the last 5 weeks and le
 This web application was developed using the design process.
 
 ![GitHub Logo](/images/imagepages.png)
-Format: ![Alt Text](url)
 When we look at the Internet site, many sites show posts like a gallery. I got inspired by this and decided to create a simple web application that shows pictures of the exhibits to the gallery and explains. 
 
 First, I thought about how to make this application. I coded what will be shown in the front end using HTML and CSS, which I learned last semester. The knowledge I learned in the front-end Web design (11056) course I completed last year was beneficial.
